@@ -16,6 +16,10 @@ const BoxContainer = styled.div`
   flex-direction: column;
   background-color: #fff;
   margin-bottom: 18px;
+  box-shadow: 0px 3px 14px 2px rgba(152, 167, 204, 0.12);
+  @media (min-width: 600px) {
+    max-width: 324px;
+  }
 `;
 
 const RowImage = styled.div`
@@ -25,6 +29,9 @@ const RowImage = styled.div`
   align-items: center;
   border-bottom: 1px solid #f4f4ff;
   height: 132px;
+  @media (min-width: 600px) {
+    height: 151px;
+  }
 `;
 
 const RowTitle = styled.div`
@@ -32,17 +39,25 @@ const RowTitle = styled.div`
   width: 100%;
   justify-content: left;
   font-family: Inter, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #233362;
   margin-top: 11px;
   padding-left: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (min-width: 600px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 `;
 
 const RowText = styled.div`
   display: flex;
   padding-left: 20px;
+  padding-right: 8px;
   font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 17px;
@@ -50,10 +65,19 @@ const RowText = styled.div`
   text-align: left;
   margin-top: 4px;
   margin-bottom: 16px;
+  font-weight: 400;
+  @media (min-width: 600px) {
+    margin-bottom: 24px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 `;
 
 const Image = styled.img`
-  width: 65%;
+  width: 190px;
+  @media (min-width: 600px) {
+    width: 209px;
+  }
 `;
 
 const BoxImage: React.FC<ParcelsList> = ({

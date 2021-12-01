@@ -2,6 +2,7 @@ import "./styles.css";
 import BoxImage from "./BoxImage";
 import { mockParcels } from "./services/mocklist";
 import Container from "./CardContainer";
+import InputSearch from "./InputSearch";
 
 export default function App() {
   return (
@@ -9,6 +10,9 @@ export default function App() {
       <h1>Hello World!!!</h1>
       <h2>Espero que ande esto</h2>
       <br></br>
+      <InputSearch />
+      <br></br>
+
       <Container>
         {mockParcels.map((el) => (
           <BoxImage
